@@ -151,12 +151,11 @@ async def burger(callback: CallbackQuery):
 async def send_rewards(callback: CallbackQuery):
     await callback.answer('Файл загружен')
     # Путь к файлу
-    file_path = r'app\Вознаграждения.xlsx'
+    file_path = r'Вознаграждения.xlsx'
     
     # Проверка существования файла
     if not os.path.exists(file_path):
         await callback.message.answer("Файл не найден.")
-        print("Текущая рабочая директория:", os.getcwd())
         return
     # Создание объекта FSInputFile
     input_file = FSInputFile(file_path)
