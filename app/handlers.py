@@ -150,13 +150,16 @@ async def burger(callback: CallbackQuery):
 @router.callback_query(F.data == 'rewards')
 async def send_rewards(callback: CallbackQuery):
     await callback.answer('Файл загружен')
-    # Путь к файлу
-    file_path = 'Вознаграждения.xlsx'
+    
+    # Получаем абсолютный путь к файлу
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app', 'Вознаграждения.xlsx')
     
     # Проверка существования файла
     if not os.path.exists(file_path):
-        await callback.message.answer("Файл не найден.")
+        await callback.message.answer("Файл не найденн.")
+        print("Файл не найден:", file_path)  # Для отладки
         return
+    
     # Создание объекта FSInputFile
     input_file = FSInputFile(file_path)
     
