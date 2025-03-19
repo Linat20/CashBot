@@ -156,6 +156,7 @@ async def send_rewards(callback: CallbackQuery):
     # Проверка существования файла
     if not os.path.exists(file_path):
         await callback.message.answer("Файл не найден.")
+        print("Текущая рабочая директория:", os.getcwd())
         return
     # Создание объекта FSInputFile
     input_file = FSInputFile(file_path)
