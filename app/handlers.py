@@ -151,7 +151,7 @@ async def burger(callback: CallbackQuery):
 async def send_rewards(callback: CallbackQuery):
     await callback.answer('Файл загружен')
     # Путь к файлу
-    file_path = r'C:\Users\PC\FASTAIOGRAM\app\Вознаграждения.xlsx'
+    file_path = r'app\Вознаграждения.xlsx'
     
     # Создание объекта FSInputFile
     input_file = FSInputFile(file_path)
