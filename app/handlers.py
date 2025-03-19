@@ -152,7 +152,8 @@ async def send_rewards(callback: CallbackQuery):
     await callback.answer('Файл загружен')
     
     # Получаем абсолютный путь к файлу
-    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app', 'Вознаграждения.xlsx')
+    file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Вознаграждения.xlsx')
+    
     
     # Проверка существования файла
     if not os.path.exists(file_path):
