@@ -151,7 +151,7 @@ async def burger(callback: CallbackQuery):
 async def send_rewards(callback: CallbackQuery):
     await callback.answer('Файл загружен')
     # Путь к файлу
-    file_path = r'Вознаграждения.xlsx'
+    file_path = 'Вознаграждения.xlsx'
     
     # Проверка существования файла
     if not os.path.exists(file_path):
