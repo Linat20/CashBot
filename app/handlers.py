@@ -7,7 +7,7 @@ import app.database.requests as rq
 import pytz  # Импортируйте pytz
 from datetime import datetime
 from aiogram.types import FSInputFile
-
+import os
 
 router = Router()
 
@@ -153,6 +153,10 @@ async def send_rewards(callback: CallbackQuery):
     # Путь к файлу
     file_path = r'app\Вознаграждения.xlsx'
     
+    # Проверка существования файла
+    if not os.path.exists(file_path):
+        await callback.message.answer("Файл не найден.")
+        return
     # Создание объекта FSInputFile
     input_file = FSInputFile(file_path)
     
