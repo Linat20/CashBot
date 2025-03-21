@@ -15,7 +15,8 @@ withdraw = InlineKeyboardMarkup(inline_keyboard=[
 
 # Раздел "Заработать"
 task = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='🎁 Партнерские задания', callback_data='pz')],
-                                     [InlineKeyboardButton(text='💬 Написание отзывов', callback_data='no')],
+                                     [InlineKeyboardButton(text='💬 Написание отзывов', callback_data='no'),
+                                     InlineKeyboardButton(text='⌛ Быстрые задания', callback_data='bz')],
                                      [InlineKeyboardButton(text='👁 Просмотр рекламы', callback_data='pr'),
                                      InlineKeyboardButton(text='💼 Оффлайн работа', callback_data='or')]])
 
