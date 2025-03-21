@@ -205,7 +205,7 @@ async def cmd_lk(message: Message):
 
         # Вычисляем количество дней в боте
         now_msk = datetime.now(pytz.timezone('Europe/Moscow'))  # Получаем текущее время в МСК
-        days_in_bot = (now_msk - registration_time+1).days
+        days_in_bot = (now_msk - registration_time).days
 
 
         await message.answer(welcome_lk_message)  # Отправка приветственного сообщения
