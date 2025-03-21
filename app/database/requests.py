@@ -21,10 +21,6 @@ async def set_user(tg_id: int) -> None:
                 data_registration=now_msk,  # Устанавливаем текущее время регистрации по МСК
                 balance=0.0,  # Начальный баланс
                 withdrawn=0.0,  # Начальная сумма вывода
-                ads_viewed=0,  # Количество просмотренной рекламы
-                reviews_written=0,  # Количество написанных отзывов
-                partner_tasks_completed=0,  # Выполненные партнерские задания
-                offline_tasks_completed=0  # Офлайн работы
             )
             session.add(new_user)  # Добавляем нового пользователя в сессию
             await session.commit()  # Коммитим изменения в базе данных
@@ -41,9 +37,5 @@ async def get_user_data(tg_id: int) -> dict:
                 "data_registration": user.data_registration,
                 "balance": user.balance,
                 "withdrawn": user.withdrawn,
-                "ads_viewed": user.ads_viewed,
-                "reviews_written": user.reviews_written,
-                "partner_tasks_completed": user.partner_tasks_completed,
-                "offline_tasks_completed": user.offline_tasks_completed,
             }
     return None

@@ -214,12 +214,6 @@ async def cmd_lk(message: Message):
             f'🆔 Мой ID: {user_data["tg_id"]}\n'
             f'🕜 Дней в боте: {days_in_bot}\n'
             f'➖➖➖➖➖➖➖➖➖\n'
-            f'✅ Выполнено:\n'
-            f'👁 Просмотр рекламы: {user_data["ads_viewed"]}\n'
-            f'📝 Написание отзывов: {user_data["reviews_written"]}\n'
-            f'👤 Партнерские задания: {user_data["partner_tasks_completed"]}\n'
-            f'🏭 Оффлайн работа: {user_data["offline_tasks_completed"]}\n'
-            f'➖➖➖➖➖➖➖➖➖\n'
             f'💳 Баланс:\n'
             f'● Основной: {user_data["balance"]}\n'
             f'● Выведено: {user_data["withdrawn"]}\n',
