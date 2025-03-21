@@ -290,4 +290,4 @@ async def privacy_policy(message: Message):
 
 @router.message(F.text == "Назад")
 async def back_to_menu(message: Message):
-   await message.edit_reply_markup(reply_markup=kb.main)    
+   await message.answer(text="", reply_markup=kb.main)    
