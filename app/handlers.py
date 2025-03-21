@@ -271,8 +271,8 @@ async def contact_info(message: Message):
     contact_text = (
         "📞 <strong>Контактная информация:</strong>\n"
         "- Напишите на email: cashbot.officiall@gmail.com\n"
-        "- Напишите в личные сообщения администратору: @CashBot_admin"
-        "- Задавайте вопросы в чате: <a href='https://t.me/+PVA49PzAQUQ3MjMy'>Присоединиться</a>"
+        "- Напишите в личные сообщения администратору: @CashBot_admin\n"
+        "- Задавайте вопросы <a href='https://t.me/+PVA49PzAQUQ3MjMy'>в чате</a>"
     )
     await message.answer(contact_text, parse_mode='HTML')
 
